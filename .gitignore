@@ -1,0 +1,13 @@
+node_modules/
+dist/
+shots/
+exports/
+
+# Machine-specific extension files (loaded if present, never committed)
+local.*
+
+# Local assets — sample models and HDRIs are not committed.
+# Drop your own .bbmodel / .exr files into public/ after cloning.
+public/*.bbmodel
+public/*.exr
+public/*.hdr

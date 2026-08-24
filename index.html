@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relight — bbmodel renderer</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #111; }
+      #viewport { width: 100vw; height: 100vh; display: block; }
+      #hud {
+        position: fixed; left: 12px; bottom: 10px; color: #ffffff99;
+        font: 12px/1.4 system-ui, sans-serif; pointer-events: none;
+        text-shadow: 0 1px 2px #000c;
+      }
+      #hud b { color: #fff; }
+      #jobstatus {
+        position: fixed; right: 12px; bottom: 10px; color: #9fc0ff;
+        font: 12px/1.4 system-ui, sans-serif; pointer-events: none;
+        text-shadow: 0 1px 2px #000c; max-width: 340px;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="viewport"></canvas>
+    <div id="hud"><b id="modelname">no model</b> — drop a .bbmodel anywhere to load it<span id="bonename"></span></div>
+    <input type="file" id="file" accept=".bbmodel,.json" style="display: none" />
+    <input type="file" id="hdrifile" accept=".exr,.hdr" style="display: none" />
+    <input type="file" id="posefile" accept=".json" style="display: none" />
+    <span id="jobstatus"></span>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
